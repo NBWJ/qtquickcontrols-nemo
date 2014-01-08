@@ -15,7 +15,8 @@ QML_FILES += \
     Checkbox.qml
 
 OTHER_FILES += qmldir \
-    $$QML_FILES
+    $$QML_FILES \
+    ListItem.qml
 
 HEADERS += \
     qquicknemocontrolsextensionplugin.h \

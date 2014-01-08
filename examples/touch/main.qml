@@ -65,6 +65,7 @@ ApplicationWindow {
         id: pageModel
         ListElement {
             title: "Live-Coding Arena"
+            subtitle :"lalala"
             page: "content/LiveCoding.qml"
         }
         ListElement {
@@ -111,8 +112,9 @@ ApplicationWindow {
             model: pageModel
             anchors.fill: parent
             clip: true
-            delegate: AndroidDelegate {
+            delegate: ListItem {
                 text: title
+                subText: subtitle
                 onClicked: pageItem.Stack.view.push(Qt.resolvedUrl(page))
             }
         }

@@ -61,44 +61,60 @@ ApplicationWindow {
         }
     }
 
-    ListModel {
+        ListModel {
         id: pageModel
         ListElement {
             title: "Live-Coding Arena"
             subtitle :"lalala"
             page: "content/LiveCoding.qml"
-        }
+            size: NemoItemSize.Large
+            }
         ListElement {
             title: "Buttons"
             page: "content/ButtonPage.qml"
+            size: NemoItemSize.Default
         }
         ListElement {
             title: "Sliders"
+            subtitle :""
             page: "content/SliderPage.qml"
+            size: NemoItemSize.Small
         }
         ListElement {
             title: "ProgressBar"
+            subtitle :""
             page: "content/ProgressBarPage.qml"
+            size: NemoItemSize.Large
         }
         ListElement {
             title: "Tabs"
+            subtitle :""
             page: "content/TabBarPage.qml"
+            size: NemoItemSize.Large
         }
         ListElement {
             title: "TextInput"
+            subtitle :""
             page: "content/TextInputPage.qml"
+            size: NemoItemSize.Default
         }
         ListElement {
             title: "Spinner"
+            subtitle :""
             page: "content/SpinnerPage.qml"
+            size: NemoItemSize.Default
         }
         ListElement {
             title: "Labels"
+            subtitle :""
             page: "content/LabelPage.qml"
+            size: NemoItemSize.Default
         }
         ListElement {
             title: "Switches"
+            subtitle :""
             page: "content/CheckboxPage.qml"
+            size: NemoItemSize.Small
         }
     }
 
@@ -115,6 +131,7 @@ ApplicationWindow {
             delegate: ListItem {
                 text: title
                 subText: subtitle
+                blocsize: size
                 onClicked: pageItem.Stack.view.push(Qt.resolvedUrl(page))
             }
         }
